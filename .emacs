@@ -1,8 +1,13 @@
 ;; Author : Adinath Shirsath <adinaths@gmail.com)
 
+
+(setq inhibit-splash-screen t)  ;; disable emacs start screen
+
+
 ;; ***************************************************************
 ;; to show line numbers 
 ;; ***************************************************************
+
 (require 'linum)
 (line-number-mode 1)
 (column-number-mode 1)    ;; line numbers at left column
@@ -30,11 +35,15 @@
 
 (global-set-key (kbd "M-/") 'hippie-expand)
 
-(yas-global-mode 1)
-
 
 ;; for MELPA support
 
 (require 'package)
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.milkbox.net/packages/") t)
+
+;; load color theme
+
+(load-theme 'tango-dark)
+
+
